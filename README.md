@@ -25,10 +25,14 @@ nmp start
 ```
 ## Accessing the API
 From your browser:
-http://localhost/product/{keyword}
+http://localhost:8000/product/{keyword}
+* Example: http://localhost:8000/product/bedding
 
 From your terminal
-curl http://localhost/product/{keyword}
+```bash
+curl http://localhost:8000/product/{keyword}
+```
+* Example: curl http://localhost:8000/product/bedding
 
 #### Response if data is available
 ```HTTP
