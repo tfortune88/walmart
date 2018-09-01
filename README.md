@@ -18,8 +18,9 @@ This is your chance show of your engineering best practices, such as well decomp
 * Will only parse the short description from the Walmart API
 
 ## Running
+```bash
 npm install
 nmp start
-
+```
 ## Accessing the API
 
