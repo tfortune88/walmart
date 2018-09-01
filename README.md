@@ -31,6 +31,7 @@ From your terminal
 curl http://localhost/product/{keyword}
 
 #### Response if data is available
+```HTTP
 HTTP/1.1 200 OK
 content-type: application/json; charset=utf-8
 cache-control: no-cache
@@ -40,8 +41,10 @@ Date: Sat, 01 Sep 2018 23:31:23 GMT
 Connection: keep-alive
 
 {"itemIds":"40611825,36248492"}
+```
 
 #### Response if data is not available
+```HTTP
 HTTP/1.1 404 Not Found
 content-type: application/json; charset=utf-8
 cache-control: no-cache
@@ -50,3 +53,4 @@ Date: Sat, 01 Sep 2018 23:33:18 GMT
 Connection: keep-alive
 
 {"statusCode":404,"error":"Not Found","message":"no products for that keyword are available"}
+```
