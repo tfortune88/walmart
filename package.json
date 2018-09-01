@@ -1,0 +1,25 @@
+{
+  "name": "walmart",
+  "version": "1.0.0",
+  "description": "Walmart Take Home Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tfortune88/walmart.git"
+  },
+  "keywords": [
+    "walmart"
+  ],
+  "author": "Thomas Fortune",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tfortune88/walmart/issues"
+  },
+  "homepage": "https://github.com/tfortune88/walmart#readme",
+  "dependencies": {
+    "hapi": "^17.5.4"
+  }
+}
