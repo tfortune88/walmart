@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/tfortune88/walmart#readme",
   "dependencies": {
-    "hapi": "^17.5.4"
+    "hapi": "^17.5.4",
+    "sleep": "^5.2.3",
+    "sync-request": "^6.0.0"
   }
 }
