@@ -16,6 +16,7 @@ This is your chance show of your engineering best practices, such as well decomp
 
 ## Assumptions
 * Will only parse the short description from the Walmart API
+* Will only store alphanumeric keys that are at least 4 characters long.
 
 ## Running
 ```bash
