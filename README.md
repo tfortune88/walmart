@@ -64,8 +64,9 @@ Connection: keep-alive
 Run: npm test
 
 The test will fire up the server and make 2 calls
-* Test #1 - 200 Response
-* Test #2 - 404 Response
-* Test #3 - 400 Response
+* Test #1 - 200 Response - /product/bedding
+* Test #2 - 404 Response - /product/bed - Only Store words for 4 characters or more
+* Test #3 - 404 Response - /product/tommyfortune - keyword does not exist
+* Test #4 - 400 Response - /product - Invalid URL
 
 Also, should really improve the unit and coverage testing before production ready.
