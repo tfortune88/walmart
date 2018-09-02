@@ -58,3 +58,12 @@ Connection: keep-alive
 
 {"statusCode":404,"error":"Not Found","message":"no products for that keyword are available"}
 ```
+
+## Testing the API
+Run: npm test
+
+The test will fire up the server and make 2 calls
+* Test #1 - 200 Response
+* Test #2 - 404 Response
+
+Also, should really improve the unit and coverage testing before production ready.
