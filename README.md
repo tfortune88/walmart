@@ -66,5 +66,6 @@ Run: npm test
 The test will fire up the server and make 2 calls
 * Test #1 - 200 Response
 * Test #2 - 404 Response
+* Test #3 - 400 Response
 
 Also, should really improve the unit and coverage testing before production ready.
