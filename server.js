@@ -9,6 +9,14 @@ var productMap = [];
 
 // TODO: Read From CSV File
 
+// FOR TESTING ONLY
+// const prodIds = [
+//     14225185,
+//     14225186,
+//     14225188,
+//     42248076
+// ];
+
 const prodIds = [
     14225185,
     14225186,
@@ -29,7 +37,6 @@ const prodIds = [
     35613901,
     42248076
 ];
-
 
 // Create a server with a host and port
 const server=Hapi.server({

@@ -4,7 +4,7 @@
   "description": "Walmart Take Home Project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
   "dependencies": {
     "boom": "^7.2.0",
     "hapi": "^17.5.4",
+    "mocha": "^5.2.0",
+    "request": "^2.88.0",
     "sleep": "^5.2.3",
     "sync-request": "^6.0.0"
   }
