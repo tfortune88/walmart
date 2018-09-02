@@ -21,7 +21,8 @@ This is your chance show of your engineering best practices, such as well decomp
 ## Running
 ```bash
 npm install
-nmp start
+nmp start -- prod # Load all the data
+nmp start # Load a couple of products for testing
 ```
 ## Accessing the API
 From your browser:

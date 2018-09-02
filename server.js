@@ -7,35 +7,10 @@ const Boom = require('boom')
 
 var productMap = [];
 
-// TODO: Read From CSV File
-
 // FOR TESTING ONLY
-// const prodIds = [
-//     14225185,
-//     14225186,
-//     14225188,
-//     42248076
-// ];
-
-const prodIds = [
-    14225185,
-    14225186,
-    14225188,
-    14225187,
-    39082884,
-    30146244,
-    12662817,
-    34890820,
-    19716431,
-    42391766,
-    35813552,
-    40611708,
-    40611825,
-    36248492,
-    44109840,
-    23117408,
-    35613901,
-    42248076
+const testIds = [
+    '14225185',
+    '14225186'
 ];
 
 // Create a server with a host and port
@@ -101,14 +76,25 @@ function cleanTheWord(dirtyWord) {
 };
 
 // Load the data from the Walmart API into a Map before the server is ready to accept connections
-function init() {
+function init(isProd) {
   console.log("init start");
+  console.log('Prod: ' + isProd);
+  
+  var itemIds = testIds;
 
-  for (var i = 0; i < prodIds.length; i++) {
-    console.log(prodIds[i]);
+  if (isProd) {
+    var fs = require('fs');
+    itemIds = fs.readFileSync('data_file.csv').toString().split(",\n");
+  }
+
+  for (var i = 0; i < itemIds.length; i++) {
+    console.log(itemIds[i]);
     
     // Use sync instead of request to serialize the requests to the Walmart API to stay of the the rev limiter
-    var res = sync('GET','http://api.walmartlabs.com/v1/items/' + prodIds[i] + '?format=json&apiKey=kjybrqfdgp3u4yv2qzcnjndj');
+    var res = sync('GET','http://api.walmartlabs.com/v1/items/' + cleanTheWord(itemIds[i]) + '?format=json&apiKey=kjybrqfdgp3u4yv2qzcnjndj');
+    
+    // TODO: Handle Error here
+
     var jsonObject = JSON.parse(res.getBody());
     hashResults(jsonObject.shortDescription, jsonObject.itemId);
     
@@ -127,8 +113,14 @@ function init() {
 // Start the server
 async function start() {
 
+    const args = process.argv;
+    var prod = false;
+    if (args[2] == 'prod') {
+        prod = true;
+    }
+
     try {
-        init();
+        init(prod);
         await server.start();
     }
     catch (err) {
