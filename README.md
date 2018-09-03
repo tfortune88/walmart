@@ -1,6 +1,14 @@
 # walmart
 This is the Walmart Take Home Assignment
 
+## Overview
+First of all, let me say "THANK YOU" for the giving me a chance to be a part of the Walmart team in PDX.  Here are some interesting facts:
+
+1. This is my first Node application - Let's see if I can figure it out!
+1. I'm time boxing this challenge to keep it under 10 hours
+1. I hope I get the opportunity to meet the team soon
+1. I want to kick Amazon's A**
+
 ## Requirements
 ### Challange
 Please see this list of item ids. Each id, represents a product in Walmart's catalogue. You are to write a REST search API that takes in a keyword and returns the list of products that have descriptions containing the keyword. A sample keyword would be backpack and that should return 3 products, i.e. 35613901, 35813552, 23117408.
