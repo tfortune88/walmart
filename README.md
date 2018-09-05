@@ -26,6 +26,9 @@ This is your chance show of your engineering best practices, such as well decomp
 * Will only parse the short description from the Walmart API
 * Will only store alphanumeric keys that are at least 4 characters long.
 
+## Installing
+Use Node 8.9.4
+
 ## Running
 ```bash
 npm install
