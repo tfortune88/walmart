@@ -46,7 +46,7 @@ curl http://localhost:8000/product/{keyword}
 ```
 * Example: curl http://localhost:8000/product/bedding
 
-#### Response if data is available
+#### Example Response if data is available
 ```HTTP
 HTTP/1.1 200 OK
 content-type: application/json; charset=utf-8
@@ -59,7 +59,7 @@ Connection: keep-alive
 {"itemIds":"40611825,36248492"}
 ```
 
-#### Response if data is not available
+#### Example Response if data is not available
 ```HTTP
 HTTP/1.1 404 Not Found
 content-type: application/json; charset=utf-8
